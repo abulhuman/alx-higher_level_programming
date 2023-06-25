@@ -1,8 +1,4 @@
 #!/usr/bin/python3
-"""
-This is the "add" importer module.
-"""
-
 from add_0 import add
 
 a = 1

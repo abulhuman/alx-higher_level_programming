@@ -1,10 +1,4 @@
 #!/usr/bin/python3
-
-"""
-This is the "add" module.
-"""
-
-
 def add(a, b):
     """My addition function
 
