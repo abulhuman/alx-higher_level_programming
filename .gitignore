@@ -1,4 +1,5 @@
 */__pycahe__/
 *.pyc
+!hidden_4.pyc
 
 .vscode/
