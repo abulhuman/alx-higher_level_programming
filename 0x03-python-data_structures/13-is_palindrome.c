@@ -16,9 +16,9 @@ int is_palindrome(listint_t **head)
     int is_palindrome = 1;
 
     if (*head == NULL || (*head)->next == NULL)
-        return (1); // An empty list or a single-node list is a palindrome
+        return (1); 
 
-    // Find the middle of the list and reverse the second half
+    
     while (fast_ptr != NULL && fast_ptr->next != NULL)
     {
         fast_ptr = fast_ptr->next->next;
@@ -26,25 +26,25 @@ int is_palindrome(listint_t **head)
         slow_ptr = slow_ptr->next;
     }
 
-    // If the list has an odd number of elements, skip the middle node
+    
     if (fast_ptr != NULL)
     {
         mid_node = slow_ptr;
         slow_ptr = slow_ptr->next;
     }
 
-    // Reverse the second half of the list
+    
     second_half = slow_ptr;
     prev_of_slow_ptr->next = NULL;
     reverse_list(&second_half);
 
-    // Compare the first and second halves of the list
+    
     is_palindrome = compare_lists(*head, second_half);
 
-    // Restore the reversed second half
+    
     reverse_list(&second_half);
 
-    // If there was a middle node, reconnect it to the list
+    
     if (mid_node != NULL)
     {
         prev_of_slow_ptr->next = mid_node;
@@ -95,7 +95,7 @@ int compare_lists(listint_t *list_one_head, listint_t *list_two_head)
         list_two_head = list_two_head->next;
     }
 
-    // If one list is longer than the other, they are not equal
+    
     if (list_one_head != NULL || list_two_head != NULL)
         return (0);
 
